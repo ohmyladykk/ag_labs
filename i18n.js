@@ -12,10 +12,10 @@ const translations = {
         hero_btn_1: "View Subscriptions",
         hero_btn_2: "Explore Platform",
         feat_header_1: "Why ",
-        feat_header_2: "Antigravity?",
+        feat_header_2: "ANTIGRAVITY?",
         feat_sub: "Unprecedented autonomy that leaves traditional AI assistants in the dust.",
         feat_1_title: "Full Autonomy",
-        feat_1_desc: "Offload the grunt work. Trigger <code>// turbo-all</code> and watch Antigravity handle system design, terminal execution, and validation completely hands-free.",
+        feat_1_desc: "Offload the grunt work. Trigger <code>// turbo-all</code> and watch ANTIGRAVITY handle system design, terminal execution, and validation completely hands-free.",
         feat_2_title: "Deep System Integration",
         feat_2_desc: "Native access to your local machine. We manipulate files, orchestrate Git workflows, and spin up servers as if we were sitting right next to you.",
         feat_3_title: "Infinite Context Memory",
@@ -68,7 +68,7 @@ const translations = {
         foot_terms: "Terms of Service",
         foot_privacy: "Privacy Policy",
         foot_legal: "Act on Specified Commercial Transactions",
-        foot_copy: "© 2026 Antigravity Match. Created for demonstration.",
+        foot_copy: "© 2026 ANTIGRAVITY Matching Platform. Created for demonstration.",
         panda_msg: "You can do it! 🦝"
     },
     ja: {
@@ -84,7 +84,7 @@ const translations = {
         hero_btn_1: "プランを見る",
         hero_btn_2: "プラットフォームを見る",
         feat_header_1: "Why ",
-        feat_header_2: "Antigravity?",
+        feat_header_2: "ANTIGRAVITY?",
         feat_sub: "従来のAIアシスタントを凌駕する前例のない自律性。",
         feat_1_title: "完全な自律性",
         feat_1_desc: "単純作業をオフロード。<code>// turbo-all</code>を使い、システム設計から検証までをハンズフリーで実行します。",
@@ -140,7 +140,7 @@ const translations = {
         foot_terms: "利用規約",
         foot_privacy: "プライバシーポリシー",
         foot_legal: "特定商取引法に基づく表記",
-        foot_copy: "© 2026 Antigravity Match. デモンストレーション用。",
+        foot_copy: "© 2026 ANTIGRAVITY Matching Platform. デモンストレーション用。",
         panda_msg: "いけるよ！ 🦝"
     },
     zh: {
@@ -156,10 +156,10 @@ const translations = {
         hero_btn_1: "查看订阅",
         hero_btn_2: "探索平台",
         feat_header_1: "为什么选择 ",
-        feat_header_2: "Antigravity？",
+        feat_header_2: "ANTIGRAVITY？",
         feat_sub: "前所未有的自主性，将传统的AI助手远远抛在脑后。",
         feat_1_title: "完全自主",
-        feat_1_desc: "减轻繁重的工作。触发<code>// turbo-all</code>，看着Antigravity完全免提地处理系统设计、终端执行和验证。",
+        feat_1_desc: "减轻繁重的工作。触发<code>// turbo-all</code>，看着ANTIGRAVITY完全免提地处理系统设计、终端执行和验证。",
         feat_2_title: "深度系统集成",
         feat_2_desc: "对本地机器的原生访问。我们操作文件、协调Git工作流程、启动服务器，仿佛就坐在您旁边。",
         feat_3_title: "无限上下文记忆",
@@ -212,7 +212,7 @@ const translations = {
         foot_terms: "服务条款",
         foot_privacy: "隐私政策",
         foot_legal: "特定商业交易法",
-        foot_copy: "© 2026 Antigravity Match. 仅用于演示。",
+        foot_copy: "© 2026 ANTIGRAVITY Matching Platform. 仅用于演示。",
         panda_msg: "你能做到的！ 🦝"
     },
     ko: {
@@ -228,10 +228,10 @@ const translations = {
         hero_btn_1: "구독 보기",
         hero_btn_2: "플랫폼 탐색",
         feat_header_1: "왜 ",
-        feat_header_2: "Antigravity인가?",
+        feat_header_2: "ANTIGRAVITY인가?",
         feat_sub: "기존의 AI 어시스턴트를 뒤처지게 만드는 전례 없는 자율성.",
         feat_1_title: "완전한 자율성",
-        feat_1_desc: "단순 작업을 넘겨주세요. <code>// turbo-all</code>을 트리거하고 Antigravity가 시스템 설계, 터미널 실행 및 검증을 처리하는 것을 지켜보세요.",
+        feat_1_desc: "단순 작업을 넘겨주세요. <code>// turbo-all</code>을 트리거하고 ANTIGRAVITY가 시스템 설계, 터미널 실행 및 검증을 처리하는 것을 지켜보세요.",
         feat_2_title: "깊은 시스템 통합",
         feat_2_desc: "로컬 시스템에 대한 기본 액세스. 마치 바로 옆에 있는 것처럼 파일을 조작하고 서버를 구성합니다.",
         feat_3_title: "무한한 컨텍스트 메모리",
@@ -284,7 +284,7 @@ const translations = {
         foot_terms: "이용약관",
         foot_privacy: "개인정보 처리방침",
         foot_legal: "특정상거래법 제시에 따른 표기",
-        foot_copy: "© 2026 Antigravity Match. 데모용입니다.",
+        foot_copy: "© 2026 ANTIGRAVITY Matching Platform. 데모용입니다.",
         panda_msg: "할 수 있어요! 🦝"
     }
 };
