@@ -440,6 +440,16 @@ section {
 }
 
 /* Responsive */
+@media (min-width: 992px) {
+    .elite-tier:hover {
+        transform: scale(1.05) translateY(-10px);
+    }
+    .elite-tier {
+        transform: scale(1.05);
+        z-index: 10;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-title { font-size: 3rem; }
     .hero-actions { flex-direction: column; }
