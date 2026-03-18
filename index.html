@@ -77,15 +77,32 @@
             <h2>Unlock <span class="gradient-text">God Mode</span></h2>
             <p>Experience the limitless power of Antigravity workflow. Try our USD Stripe Checkout simulation below.</p>
         </div>
-        <div class="glass-card" style="max-width: 400px; margin: 0 auto; padding: 40px;">
-            <h3 style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; margin-bottom: 10px;">Pro Developer</h3>
-            <p style="font-size: 3.5rem; font-weight: 800; margin-bottom: 10px;" class="gradient-text">$99<span style="font-size: 1.2rem; color: var(--text-muted);"> USD/mo</span></p>
-            <p style="margin-bottom: 30px; color: var(--text-muted);">Unlimited autonomous executions, 24/7 dedicated agents, and priority context windows.</p>
+        <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+            <div class="glass-card" style="flex: 1; min-width: 300px; max-width: 400px; padding: 40px; text-align: left;">
+                <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; margin-bottom: 10px;">Basic AI</h3>
+                <p style="font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: var(--text-color);">$19<span style="font-size: 1rem; color: var(--text-muted);"> USD/mo</span></p>
+                <ul style="margin-bottom: 30px; color: var(--text-muted); padding-left: 20px; line-height: 1.8; font-size: 0.95rem;">
+                    <li>Standard coding assistance</li>
+                    <li>Limited context window (8K)</li>
+                    <li>Shared agent access</li>
+                </ul>
+                <a href="#" class="btn btn-outline btn-large w-100" style="text-decoration: none; display: inline-block; box-sizing: border-box; text-align: center;">Get Basic</a>
+            </div>
             
-            <!-- Stripe Test Payment Link Button -->
-            <a href="https://buy.stripe.com/test_00g14L6kMgzH9K8288" target="_blank" class="btn btn-primary btn-large w-100" style="text-decoration: none; display: inline-block; box-sizing: border-box;">Unlock Pro Access</a>
-            <p style="font-size: 0.8rem; margin-top: 15px; color: var(--text-muted);">* Powered by Stripe Test Mode. No real charges will be made.</p>
+            <div class="glass-card" style="flex: 1; min-width: 300px; max-width: 400px; padding: 40px; text-align: left; position: relative; border-color: var(--primary-light); box-shadow: 0 0 30px rgba(123, 44, 191, 0.2);">
+                <div style="position: absolute; top: -15px; right: 20px; background: linear-gradient(135deg, var(--accent), #ff758c); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">RECOMMENDED</div>
+                <h3 style="font-family: 'Outfit', sans-serif; font-size: 2.2rem; margin-bottom: 10px;">Pro Developer</h3>
+                <p style="font-size: 3.5rem; font-weight: 800; margin-bottom: 10px;" class="gradient-text">$99<span style="font-size: 1.2rem; color: var(--text-muted);"> USD/mo</span></p>
+                <ul style="margin-bottom: 30px; color: var(--text-muted); padding-left: 20px; line-height: 1.8; font-size: 0.95rem;">
+                    <li>Unlimited autonomous executions</li>
+                    <li>24/7 dedicated agents</li>
+                    <li>Infinite context memory</li>
+                    <li>System-level terminal access</li>
+                </ul>
+                <a href="https://buy.stripe.com/test_00g14L6kMgzH9K8288" target="_blank" class="btn btn-primary btn-large w-100" style="text-decoration: none; display: inline-block; box-sizing: border-box; text-align: center;">Unlock Pro Access</a>
+            </div>
         </div>
+        <p style="font-size: 0.8rem; margin-top: 30px; color: var(--text-muted);">* Powered by Stripe Test Mode. No real charges will be made.</p>
     </section>
 
     <section id="profiles" class="profiles-section">
@@ -155,12 +172,13 @@
         <p>© 2026 Antigravity Match. Created for demonstration.</p>
     </footer>
 
-    <div id="red-panda" style="position: fixed; bottom: -150px; right: 20px; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); z-index: 9999; text-align: center;">
-        <div style="background: white; color: #333; padding: 10px; border-radius: 10px; font-weight: bold; font-family: 'Outfit'; font-size: 14px; margin-bottom: 5px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); position: relative;">
-            You can do it! 🐾
-            <div style="content: ''; position: absolute; bottom: -8px; right: 45px; border-width: 8px 8px 0; border-style: solid; border-color: white transparent transparent transparent;"></div>
+    <div id="red-panda" style="position: fixed; bottom: -150px; right: 20px; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); z-index: 9999; text-align: center; cursor: pointer;">
+        <div class="panda-message" style="background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); color: #ff006e; padding: 12px 18px; border-radius: 12px; font-weight: 800; font-family: 'Outfit'; font-size: 15px; margin-bottom: 8px; box-shadow: 0 8px 25px rgba(255,0,110,0.3); position: relative; border: 2px solid #ff006e; transform: translateY(0); animation: pulseFloat 2s infinite;">
+            You can do it! 🦝
+            <div style="content: ''; position: absolute; bottom: -10px; right: 45px; border-width: 10px 10px 0; border-style: solid; border-color: #ff006e transparent transparent transparent;"></div>
+            <div style="content: ''; position: absolute; bottom: -7px; right: 45px; border-width: 9px 9px 0; border-style: solid; border-color: rgba(255,255,255,0.9) transparent transparent transparent; z-index: 1;"></div>
         </div>
-        <div style="font-size: 80px; transform: scaleX(-1); filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));">🐼</div>
+        <div class="panda-emoji" style="font-size: 85px; transform: scaleX(-1); filter: drop-shadow(0 8px 15px rgba(0,0,0,0.4)); animation: jump 1s infinite alternate cubic-bezier(0.5, 0.05, 1, 0.5);">🦝</div>
     </div>
 
     <script>

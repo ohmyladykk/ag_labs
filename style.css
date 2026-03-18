@@ -174,13 +174,14 @@ h1, h2, h3, .logo {
 }
 
 .glass-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(123, 44, 191, 0.2);
     border-radius: 20px;
     padding: 30px;
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s, border-color 0.4s;
 }
 
 /* Hero Section */
@@ -424,6 +425,17 @@ section {
 @keyframes fadeInDown {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes jump {
+    from { transform: scaleX(-1) translateY(0); }
+    to { transform: scaleX(-1) translateY(-20px); }
+}
+
+@keyframes pulseFloat {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-5px) scale(1.05); }
+    100% { transform: translateY(0) scale(1); }
 }
 
 /* Responsive */
