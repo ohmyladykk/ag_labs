@@ -89,12 +89,22 @@
             <p data-i18n="price_sub">Engineered for the global elite. Choose the computing power that matches your ambition.</p>
         </div>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px; max-width: 1200px; margin: 40px auto 0;">
+        <div class="pricing-toggle-wrap" style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-top: 20px;">
+            <span data-i18n="toggle_monthly" class="toggle-label active" id="label-monthly" onclick="setBilling('monthly')">Monthly</span>
+            <div class="toggle-switch" onclick="toggleBilling()" id="billing-toggle">
+                <div class="toggle-knob"></div>
+            </div>
+            <span data-i18n="toggle_annually" class="toggle-label" id="label-annually" onclick="setBilling('annual')">Annually</span>
+            <span class="save-badge" data-i18n="save_20">Save 20%</span>
+        </div>
+        
+        <div id="pricing-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px; max-width: 1200px; margin: 40px auto 0;">
             <!-- Explorer -->
             <div class="glass-card" style="padding: 30px; text-align: left; display: flex; flex-direction: column;">
                 <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin-bottom: 5px;" data-i18n="price_exp_title">Explorer</h3>
-                <p style="font-size: 2.2rem; font-weight: 800; margin-bottom: 20px; color: var(--text-color);">$0<span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 400;" data-i18n="price_exp_mo"> /mo</span></p>
-                <ul style="margin-bottom: 30px; color: var(--text-muted); padding-left: 20px; line-height: 1.8; font-size: 0.9rem; flex-grow: 1;">
+                <p style="font-size: 2.2rem; font-weight: 800; margin-bottom: 0px; color: var(--text-color);">$<span class="price-monthly">0</span><span class="price-annually">0</span><span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 400;" data-i18n="price_exp_mo"> /mo</span></p>
+                <div class="annual-label" data-i18n="billed_annually">Billed annually</div>
+                <ul style="margin-bottom: 30px; margin-top: 20px; color: var(--text-muted); padding-left: 20px; line-height: 1.8; font-size: 0.9rem; flex-grow: 1;">
                     <li data-i18n="price_exp_li1">Standard coding assistance</li>
                     <li data-i18n="price_exp_li2">Community support</li>
                     <li data-i18n="price_exp_li3">Basic context window (4K)</li>
@@ -105,8 +115,9 @@
             <!-- Professional -->
             <div class="glass-card" style="padding: 30px; text-align: left; display: flex; flex-direction: column;">
                 <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin-bottom: 5px;" data-i18n="price_pro_title">Professional</h3>
-                <p style="font-size: 2.2rem; font-weight: 800; margin-bottom: 20px; color: var(--text-color);">$29<span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 400;" data-i18n="price_pro_mo"> /mo</span></p>
-                <ul style="margin-bottom: 30px; color: var(--text-muted); padding-left: 20px; line-height: 1.8; font-size: 0.9rem; flex-grow: 1;">
+                <p style="font-size: 2.2rem; font-weight: 800; margin-bottom: 0px; color: var(--text-color);">$<span class="price-monthly">29</span><span class="price-annually">24</span><span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 400;" data-i18n="price_pro_mo"> /mo</span></p>
+                <div class="annual-label" data-i18n="billed_annually">Billed annually</div>
+                <ul style="margin-bottom: 30px; margin-top: 20px; color: var(--text-muted); padding-left: 20px; line-height: 1.8; font-size: 0.9rem; flex-grow: 1;">
                     <li data-i18n="price_pro_li1">Advanced pair programming</li>
                     <li data-i18n="price_pro_li2">Extended context (32K)</li>
                     <li data-i18n="price_pro_li3">Priority compute access</li>
@@ -118,8 +129,9 @@
             <div class="glass-card elite-tier" style="padding: 30px; text-align: left; position: relative; border-color: var(--primary-light); box-shadow: 0 0 30px rgba(123, 44, 191, 0.2); display: flex; flex-direction: column;">
                 <div style="position: absolute; top: -12px; right: 20px; background: linear-gradient(135deg, var(--accent), #ff758c); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 800; letter-spacing: 1px;" data-i18n="price_rec">RECOMMENDED</div>
                 <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; margin-bottom: 5px;" data-i18n="price_eli_title">Elite</h3>
-                <p style="font-size: 2.8rem; font-weight: 800; margin-bottom: 20px;" class="gradient-text">$99<span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 400;" data-i18n="price_eli_mo"> /mo</span></p>
-                <ul style="margin-bottom: 30px; color: var(--text-muted); padding-left: 20px; line-height: 1.8; font-size: 0.9rem; flex-grow: 1;">
+                <p style="font-size: 2.8rem; font-weight: 800; margin-bottom: 0px;" class="gradient-text">$<span class="price-monthly">99</span><span class="price-annually">79</span><span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 400;" data-i18n="price_eli_mo"> /mo</span></p>
+                <div class="annual-label" data-i18n="billed_annually">Billed annually</div>
+                <ul style="margin-bottom: 30px; margin-top: 20px; color: var(--text-muted); padding-left: 20px; line-height: 1.8; font-size: 0.9rem; flex-grow: 1;">
                     <li data-i18n="price_eli_li1">Unlimited autonomous executions</li>
                     <li data-i18n="price_eli_li2">Infinite context memory</li>
                     <li data-i18n="price_eli_li3">System-level terminal control</li>
@@ -131,8 +143,9 @@
             <!-- Founder -->
             <div class="glass-card" style="padding: 30px; text-align: left; display: flex; flex-direction: column;">
                 <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin-bottom: 5px;" data-i18n="price_fou_title">Founder</h3>
-                <p style="font-size: 2.2rem; font-weight: 800; margin-bottom: 20px; color: var(--text-color);">$499<span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 400;" data-i18n="price_fou_mo"> /mo</span></p>
-                <ul style="margin-bottom: 30px; color: var(--text-muted); padding-left: 20px; line-height: 1.8; font-size: 0.9rem; flex-grow: 1;">
+                <p style="font-size: 2.2rem; font-weight: 800; margin-bottom: 0px; color: var(--text-color);">$<span class="price-monthly">499</span><span class="price-annually">399</span><span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 400;" data-i18n="price_fou_mo"> /mo</span></p>
+                <div class="annual-label" data-i18n="billed_annually">Billed annually</div>
+                <ul style="margin-bottom: 30px; margin-top: 20px; color: var(--text-muted); padding-left: 20px; line-height: 1.8; font-size: 0.9rem; flex-grow: 1;">
                     <li data-i18n="price_fou_li1">Custom AI model fine-tuning</li>
                     <li data-i18n="price_fou_li2">Private VPC deployment</li>
                     <li data-i18n="price_fou_li3">Dedicated support engineer</li>
@@ -260,6 +273,30 @@
                 panda.style.bottom = '-150px';
             }
         });
+        // Pricing Toggle Logic
+        let isAnnual = false;
+        function setBilling(mode) {
+            if (mode === 'annual' && !isAnnual) { toggleBilling(); }
+            else if (mode === 'monthly' && isAnnual) { toggleBilling(); }
+        }
+        function toggleBilling() {
+            isAnnual = !isAnnual;
+            const toggleEl = document.getElementById('billing-toggle');
+            const grid = document.getElementById('pricing-grid');
+            const lblM = document.getElementById('label-monthly');
+            const lblA = document.getElementById('label-annually');
+            if (isAnnual) {
+                toggleEl.classList.add('active');
+                grid.classList.add('is-annual');
+                lblA.classList.add('active');
+                lblM.classList.remove('active');
+            } else {
+                toggleEl.classList.remove('active');
+                grid.classList.remove('is-annual');
+                lblA.classList.remove('active');
+                lblM.classList.add('active');
+            }
+        }
     </script>
     <script src="i18n.js"></script>
 </body>
