@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG Labs - CEO Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="cyber_panda.png" alt="レッサーパンダCEO" id="panda-avatar" class="panda-avatar">
+            <h1>🍎 Antigravity Labs 🐾</h1>
+            <p>CEO: Kanoko Sasaki</p>
+        </header>
+
+        <main>
+            <section class="voice-card">
+                <h2>🎙️ Antigravity の「知性」</h2>
+                <p>5ドルの投資によって得た、Echo（米津風イケボ）の響き。</p>
+                <button id="speak-btn" class="btn-primary">メッセージを聴く</button>
+                <p id="status" style="margin-top:10px; font-size:0.8em; color:#00f2fe;"></p>
+            </section>
+        </main>
+
+        <footer>
+            <a href="legal.html">特定商取引法に基づく表記</a>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('speak-btn').addEventListener('click', async () => {
+            const status = document.getElementById('status');
+            status.innerText = "⏳ サーバーに声を注文中...";
+            
+            try {
+                const response = await fetch('http://localhost:5000/speak', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text: "社長、お疲れ様です。サイトからの音声リクエスト、無事に届きましたよ。これがAGラボの、新しい時代の声です。" })
+                });
+
+                if (!response.ok) throw new Error('サーバーが寝てるかも？');
+
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const audio = new Audio(url);
+                status.innerText = "🎵 再生中...";
+                audio.play();
+                audio.onended = () => { status.innerText = "✅ 再生完了！"; };
+            } catch (err) {
+                status.innerText = "⚠️ エラー: ローカルサーバー（ag_server.py）を起動してください！";
+                console.error(err);
+            }
+        });
+    </script>
+</body>
+</html>
