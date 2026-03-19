@@ -22,7 +22,7 @@ def deploy():
         print("\n✅ 【完全勝利】GitHubへのアップロードが完了しました！")
         print("🌐 社長のサイトはこちら:")
         # GitHub PagesのURLを推測して表示（リポジトリ名から）
-        print("https://ohmyladykk.github.io/ag_labs/")
+        print("https://ohmyladykk.github.io/ag_labs2/")
         
     except subprocess.CalledProcessError as e:
         print(f"\n⚠️ エラー発生: 変更がないか、GitHubとの接続に問題があります。")
