@@ -1,51 +1,42 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AG Labs - CEO Dashboard (Premium)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>AG Labs - CEO Dashboard (ULTRA)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="bg-gradient"></div>
-    <div class="bg-orbs"></div>
-
     <div class="container">
-        <header class="glass-header">
-            <h1 class="gradient-text">🍎 Antigravity Labs 🐾</h1>
-            <p class="subtitle">CEO: Kanoko Sasaki</p>
+        <header>
+            <h1>🍎 Antigravity Labs 🐾</h1>
+            <div class="status-badge">ULTRA MODE ENABLED</div>
         </header>
 
         <main>
-            <section class="glass-card auth-card">
-                <div class="avatar-wrapper">
-                    <img src="cyber_panda.png" alt="Cyber Panda CEO" id="panda-avatar" class="panda-avatar">
-                    <div class="status-dot"></div>
+            <section class="card video-section">
+                <h3>🎥 CEO Working Hard...</h3>
+                <div class="video-container">
+                    <video autoplay loop muted playsinline class="main-video">
+                        <source src="panda_ceo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
-                <h2>🔑 Secure Access</h2>
-                <p>Google Workspaceアカウントでログインしてください</p>
-                <button class="btn btn-google">
-                    <svg class="google-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20px" height="20px"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg>
-                    Continue with Google
-                </button>
+                <p class="video-caption">AI開発に勤しむ佐々木CEO（のイメージ）</p>
             </section>
 
-            <section class="glass-card payment-card">
-                <div class="premium-badge">PREMIUM</div>
-                <h3>💎 AG Labs Hybrid Payment</h3>
-                <p>リアルタイムAI翻訳 & 実況サポート無制限</p>
-                
-                <div class="price-box">
-                    <span class="currency">¥</span><span class="amount">980</span><span class="period">/月</span>
-                </div>
+            <section class="card auth-section">
+                <h2>🔑 メンバー限定ログイン</h2>
+                <button class="btn-google">G | Googleアカウントでログイン</button>
+            </section>
 
-                <div class="payment-options">
-                    <button class="btn btn-stripe">💳 クレジットカード決済</button>
-                    <button class="btn btn-nexo">₿ Nexo / 仮想通貨決済</button>
+            <section class="card payment-section">
+                <h3>💎 プレミアムプラン</h3>
+                <div class="price">¥980 <small>/ 月</small></div>
+                <div class="pay-buttons">
+                    <button class="btn-stripe">💳 クレジットカード</button>
+                    <button class="btn-nexo">₿ Nexo / 仮想通貨</button>
                 </div>
-                <p class="security-note">※ パスワードやカード情報はAG Labsには保存されません。各公式決済システムにて安全に処理されます。</p>
             </section>
         </main>
     </div>
