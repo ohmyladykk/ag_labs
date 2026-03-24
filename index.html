@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG Platforms | Find Your Perfect AI Pair Programming Partner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Glowing Background Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <nav class="navbar">
+        <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+            <img src="logo.png" alt="AG Platforms Logo" style="height: 38px; border-radius: 8px;">
+            <div>
+                <span class="gradient-text" style="font-weight: 900; letter-spacing: 1px;">AG PLATFORMS</span>
+                
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#features" data-i18n="nav_features">Features</a>
+            <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+            <a href="#profiles" data-i18n="nav_partners">Partners</a>
+            
+            <div class="lang-switcher">
+                <button class="lang-btn">🌐 <span id="current-lang">EN</span></button>
+                <div class="lang-content">
+                    <a href="#" onclick="changeLanguage('en')">English (EN)</a>
+                    <a href="#" onclick="changeLanguage('ja')">日本語 (JA)</a>
+                    <a href="#" onclick="changeLanguage('zh')">简体中文 (ZH)</a>
+                    <a href="#" onclick="changeLanguage('ko')">한국어 (KO)</a>
+                </div>
+            </div>
+
+            <button class="btn btn-outline" data-i18n="nav_login">Log In</button>
+            <button class="btn btn-primary" data-i18n="nav_start">Get Started</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="pill-badge" data-i18n="hero_badge">🌍 Global Platform for Top Engineers</div>
+            <h1 class="hero-title">
+                <span data-i18n="hero_title_1">Code Without Limits. <br></span>
+                <span class="gradient-text" data-i18n="hero_title_2">Automate the Future.</span>
+            </h1>
+            <p class="hero-subtitle">
+                <span data-i18n="hero_subtitle">Built strictly for the world's elite developers.<br>
+                AG Platforms provides you with an autonomous AI co-founder that handles complex architectures, system-level terminal execution, and zero-downtime deployments.<br>
+                Scale your vision globally.</span>
+            </p>
+            <video autoplay loop muted playsinline class="hero-video" style="margin: 20px 0;">
+                <source src="panda_ceo.mp4" type="video/mp4">
+            </video>
+            <div class="hero-actions">
+                <a href="#pricing" class="btn btn-primary btn-large" style="text-decoration: none;" data-i18n="hero_btn_1">View Subscriptions</a>
+                <a href="#features" class="btn btn-secondary btn-large" style="text-decoration: none;" data-i18n="hero_btn_2">Explore Platform</a>
+            </div>
+            
+            <div class="skill-marquee-wrapper" style="margin-top: 60px; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; overflow: hidden; opacity: 0; animation: fadeInUp 1s ease-out forwards 0.5s;">
+                <div class="skill-marquee">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">AI / Machine Learning</span>
+                    <span class="skill-tag">Godot Engine</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Cloud Architecture</span>
+                    <!-- Duplicate -->
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">AI / Machine Learning</span>
+                    <span class="skill-tag">Godot Engine</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Cloud Architecture</span>
+                    <!-- Duplicate 2 -->
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">AI / Machine Learning</span>
+                    <span class="skill-tag">Godot Engine</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Cloud Architecture</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features-section">
+        <div class="section-header">
+            <h2><span data-i18n="feat_header_1">Why </span><span class="gradient-text" data-i18n="feat_header_2">AG Platforms?</span></h2>
+            <p data-i18n="feat_sub">Unprecedented autonomy that leaves traditional AI assistants in the dust.</p>
+        </div>
+        
+        <!-- ▼ デスクトップウィジェット用 動画＆ダウンロードへの導線 ▼ -->
+        <div style="text-align: center; margin: 40px 0;">
+            <video src="動画生成AIの逃走と捕獲.mp4" autoplay loop muted playsinline 
+                   style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            </video>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 50px; padding: 20px; background-color: #f9f9f9; border-radius: 8px;">
+            <h3 style="margin-bottom: 15px; color: #333;">ウィジェットのダウンロードはこちら</h3>
+            <p style="color: #666; margin-bottom: 20px;">決済完了後、すぐにデスクトップウィジェットをご利用いただけます。</p>
+            
+            <a href="https://note.com/kk310/n/n35598429e5dc" 
+               style="display: inline-block; padding: 15px 40px; background-color: #2cb696; color: white; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1.2em; transition: 0.3s;">
+               noteで購入してダウンロード
+            </a>
+        </div>
+        <!-- ▲ ここまで ▲ -->
+
+        <div class="feature-grid">
+            <div class="glass-card feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3 data-i18n="feat_1_title">Full Autonomy</h3>
+                <p data-i18n="feat_1_desc">Offload the grunt work. Trigger <code>// turbo-all</code> and watch AG Platforms handle system design, terminal execution, and validation completely hands-free.</p>
+            </div>
+            <div class="glass-card feature-card">
+                <div class="feature-icon">💻</div>
+                <h3 data-i18n="feat_2_title">Deep System Integration</h3>
+                <p data-i18n="feat_2_desc">Native access to your local machine. We manipulate files, orchestrate Git workflows, and spin up servers as if we were sitting right next to you.</p>
+            </div>
+            <div class="glass-card feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3 data-i18n="feat_3_title">Infinite Context Memory</h3>
+                <p data-i18n="feat_3_desc">Powered by the revolutionary KI System. Your agent retains complete workflow history and grasps your project's architectural state instantly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="projects-section" style="padding-top: 50px;">
+        <div class="section-header">
+            <h2><span data-i18n="proj_header_1">Featured </span><span class="gradient-text" data-i18n="proj_header_2">Missions</span></h2>
+            <p data-i18n="proj_sub">Exclusive, high-impact projects waiting for elite talent.</p>
+        </div>
+        
+        <div class="project-cards" style="display: flex; flex-wrap: wrap; gap: 30px; max-width: 1200px; margin: 40px auto 0; justify-content: center;">
+            <!-- Category: Global Matching -->
+            <div class="glass-card project-card" style="flex: 1; min-width: 320px; text-align: left; position: relative; overflow: hidden; padding: 35px; border-top: 3px solid #ff006e; box-shadow: 0 10px 30px rgba(255, 0, 110, 0.1); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(255,0,110,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(255, 0, 110, 0.1)';">
+                <div class="project-glow" style="position: absolute; top: -50px; left: -50px; width: 100px; height: 100px; background: #ff006e; filter: blur(50px); opacity: 0.5;"></div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 5px; position: relative; z-index: 2;">
+                    <div style="font-size: 0.8rem; color: #ff006e; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;" data-i18n="cat_matching">Global Matching</div>
+                    <span style="background: rgba(255, 0, 110, 0.2); color: #ff006e; border: 1px solid rgba(255,0,110,0.5); padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: 800; letter-spacing: 1px; animation: pulseFloat 3s infinite;" data-i18n="proj_status">RECRUITING</span>
+                </div>
+                <h3 style="font-size: 1.6rem; margin: 5px 0 15px 0; font-family: 'Outfit', sans-serif; color: #fff;" data-i18n="proj1_title">Red Panda Riot</h3>
+                <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 25px; font-size: 0.95rem; position: relative; z-index: 2;" data-i18n="proj1_desc">A next-generation action game where a red panda unleashes chaos, powered by the Godot engine.</p>
+                <div class="tags" style="margin-bottom: 30px; position: relative; z-index: 2;">
+                    <span class="tag" style="border-color: rgba(255, 255, 255, 0.1); background: rgba(0,0,0,0.3); color: #fff;">Godot</span>
+                    <span class="tag" style="border-color: rgba(255, 255, 255, 0.1); background: rgba(0,0,0,0.3); color: #fff;">Python</span>
+                    <span class="tag" style="border-color: rgba(255, 255, 255, 0.1); background: rgba(0,0,0,0.3); color: #fff;">Game Dev</span>
+                </div>
+                <a href="#pricing" class="btn btn-primary w-100" style="text-decoration: none; text-align: center; display: block; box-sizing: border-box; background: linear-gradient(135deg, #ff006e, var(--accent)); transition: all 0.3s; position: relative; z-index: 2;" onmouseover="this.style.boxShadow='0 0 20px rgba(255,0,110,0.6)'" onmouseout="this.style.boxShadow='none'" data-i18n="proj_btn">Join Mission 🚀</a>
+            </div>
+
+            <!-- Category: AG Labs -->
+            <div class="glass-card project-card" style="flex: 1; min-width: 320px; text-align: left; position: relative; overflow: hidden; padding: 35px; border-top: 3px solid #4cc9f0; box-shadow: 0 10px 30px rgba(76, 201, 240, 0.1); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(76,201,240,0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(76, 201, 240, 0.1)';">
+                <div class="project-glow" style="position: absolute; top: -50px; left: -50px; width: 100px; height: 100px; background: #4cc9f0; filter: blur(50px); opacity: 0.3;"></div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 5px; position: relative; z-index: 2;">
+                    <div style="font-size: 0.8rem; color: #4cc9f0; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;" data-i18n="cat_labs">AG Labs (Originals)</div>
+                    <span style="background: rgba(76, 201, 240, 0.2); color: #4cc9f0; border: 1px solid rgba(76,201,240,0.5); padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: 800; letter-spacing: 1px; animation: pulseFloat 3s infinite 1.5s;" data-i18n="tag_patent">PATENT PENDING</span>
+                </div>
+                <h3 style="font-size: 1.6rem; margin: 5px 0 15px 0; font-family: 'Outfit', sans-serif; color: #fff;" data-i18n="proj2_title">Real-Time AI Voice Translation App</h3>
+                <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 25px; font-size: 0.95rem; position: relative; z-index: 2;" data-i18n="proj2_desc">A next-generation AI streaming tool that translates game streamers in real-time into multiple languages and synthesizes their natural voice clone.</p>
+                <div class="tags" style="margin-bottom: 30px; position: relative; z-index: 2;">
+                    <span class="tag" style="border-color: rgba(255, 255, 255, 0.1); background: rgba(0,0,0,0.3); color: #fff;">Python</span>
+                    <span class="tag" style="border-color: rgba(255, 255, 255, 0.1); background: rgba(0,0,0,0.3); color: #fff;">Voice AI / ML</span>
+                    <span class="tag" style="border-color: rgba(255, 255, 255, 0.1); background: rgba(0,0,0,0.3); color: #fff;">WebSockets</span>
+                </div>
+                <a href="#pricing" class="btn btn-primary w-100" style="text-decoration: none; text-align: center; display: block; box-sizing: border-box; background: linear-gradient(135deg, #7209b7, #4cc9f0); transition: all 0.3s; position: relative; z-index: 2;" onmouseover="this.style.boxShadow='0 0 20px rgba(76,201,240,0.6)'" onmouseout="this.style.boxShadow='none'" data-i18n="proj_btn">Join Mission 🚀</a>
+            </div>
+
+            <!-- Category: AG Labs (Music Distribution) -->
+            <div class="glass-card project-card" style="flex: 1; min-width: 320px; text-align: left; position: relative; overflow: hidden; padding: 35px; border-top: 3px solid #7209b7; box-shadow: 0 10px 30px rgba(114, 9, 183, 0.1); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(114,9,183,0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(114, 9, 183, 0.1)';">
+                <div class="project-glow" style="position: absolute; top: -50px; left: -50px; width: 100px; height: 100px; background: #7209b7; filter: blur(50px); opacity: 0.3;"></div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 5px; position: relative; z-index: 2;">
+                    <div style="font-size: 0.8rem; color: #7209b7; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;" data-i18n="cat_labs">AG Labs (Originals)</div>
+                    <span style="background: rgba(114, 9, 183, 0.2); color: #bb86fc; border: 1px solid rgba(114,9,183,0.5); padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: 800; letter-spacing: 1px; animation: pulseFloat 3s infinite 2.5s;" data-i18n="tag_launch">GLOBAL LAUNCH</span>
+                </div>
+                <h3 style="font-size: 1.6rem; margin: 5px 0 15px 0; font-family: 'Outfit', sans-serif; color: #fff;" data-i18n="proj3_title">Next-Gen AI Music Distribution</h3>
+                <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 25px; font-size: 0.95rem; position: relative; z-index: 2;" data-i18n="proj3_desc">An innovative music distribution platform merging original composition with AI generation.</p>
+                <div class="tags" style="margin-bottom: 30px; position: relative; z-index: 2;">
+                    <span class="tag" style="border-color: rgba(255, 255, 255, 0.1); background: rgba(0,0,0,0.3); color: #fff;">AI / ML</span>
+                    <span class="tag" style="border-color: rgba(255, 255, 255, 0.1); background: rgba(0,0,0,0.3); color: #fff;">Python</span>
+                    <span class="tag" style="border-color: rgba(255, 255, 255, 0.1); background: rgba(0,0,0,0.3); color: #fff;">Audio Processing</span>
+                </div>
+                <a href="#pricing" class="btn btn-primary w-100" style="text-decoration: none; text-align: center; display: block; box-sizing: border-box; background: linear-gradient(135deg, #f72585, #7209b7); transition: all 0.3s; position: relative; z-index: 2;" onmouseover="this.style.boxShadow='0 0 20px rgba(114,9,183,0.6)'" onmouseout="this.style.boxShadow='none'" data-i18n="proj_btn">Join Mission 🚀</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section" style="padding-top: 50px; text-align: center;">
+        <div class="section-header">
+            <h2><span data-i18n="price_header_1">Select Your </span><span class="gradient-text" data-i18n="price_header_2">Trajectory</span></h2>
+            <p data-i18n="price_sub">Engineered for the global elite. Choose the computing power that matches your ambition.</p>
+        </div>
+        
+        <div class="pricing-toggle-wrap" style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-top: 20px;">
+            <span data-i18n="toggle_monthly" class="toggle-label active" id="label-monthly" onclick="setBilling('monthly')">Monthly</span>
+            <div class="toggle-switch" onclick="toggleBilling()" id="billing-toggle">
+                <div class="toggle-knob"></div>
+            </div>
+            <span data-i18n="toggle_annually" class="toggle-label" id="label-annually" onclick="setBilling('annual')">Annually</span>
+            <span class="save-badge" data-i18n="save_20">Save 20%</span>
+        </div>
+        
+        <div id="pricing-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px; max-width: 1200px; margin: 40px auto 0;">
+            <!-- Explorer -->
+            <div class="glass-card" style="padding: 30px; text-align: left; display: flex; flex-direction: column;">
+                <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin-bottom: 5px;" data-i18n="price_exp_title">Explorer</h3>
+                <p style="font-size: 2.2rem; font-weight: 800; margin-bottom: 0px; color: var(--text-color);">$<span class="price-monthly">0</span><span class="price-annually">0</span><span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 400;" data-i18n="price_exp_mo"> /mo</span></p>
+                <div class="annual-label" data-i18n="billed_annually">Billed annually</div>
+                <ul style="margin-bottom: 30px; margin-top: 20px; color: var(--text-muted); padding-left: 20px; line-height: 1.8; font-size: 0.9rem; flex-grow: 1;">
+                    <li data-i18n="price_exp_li1">Standard coding assistance</li>
+                    <li data-i18n="price_exp_li2">Community support</li>
+                    <li data-i18n="price_exp_li3">Basic context window (4K)</li>
+                </ul>
+                <a href="mailto:support@ag-platforms.com?subject=Explorer%20Plan%20Registration" class="btn btn-outline w-100" style="text-decoration: none; text-align: center; display: block; box-sizing: border-box;" data-i18n="price_exp_btn">Start Free</a>
+            </div>
+            
+            <!-- Professional -->
+            <div class="glass-card" style="padding: 30px; text-align: left; display: flex; flex-direction: column;">
+                <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin-bottom: 5px;" data-i18n="price_pro_title">Professional</h3>
+                <p style="font-size: 2.2rem; font-weight: 800; margin-bottom: 0px; color: var(--text-color);">$<span class="price-monthly">29</span><span class="price-annually">24</span><span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 400;" data-i18n="price_pro_mo"> /mo</span></p>
+                <div class="annual-label" data-i18n="billed_annually">Billed annually</div>
+                <ul style="margin-bottom: 30px; margin-top: 20px; color: var(--text-muted); padding-left: 20px; line-height: 1.8; font-size: 0.9rem; flex-grow: 1;">
+                    <li data-i18n="price_pro_li1">Advanced pair programming</li>
+                    <li data-i18n="price_pro_li2">Extended context (32K)</li>
+                    <li data-i18n="price_pro_li3">Priority compute access</li>
+                </ul>
+                <a href="https://buy.stripe.com/live_pro29" target="_blank" class="btn btn-outline w-100" style="text-decoration: none; text-align: center; display: block; box-sizing: border-box; border-color: var(--primary-light); color: var(--text-color);" data-i18n="price_pro_btn">Upgrade to Pro</a>
+            </div>
+
+            <!-- Elite -->
+            <div class="glass-card elite-tier" style="padding: 30px; text-align: left; position: relative; border-color: var(--primary-light); box-shadow: 0 0 30px rgba(123, 44, 191, 0.2); display: flex; flex-direction: column;">
+                <div style="position: absolute; top: -12px; right: 20px; background: linear-gradient(135deg, var(--accent), #ff758c); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 800; letter-spacing: 1px;" data-i18n="price_rec">RECOMMENDED</div>
+                <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; margin-bottom: 5px;" data-i18n="price_eli_title">Elite</h3>
+                <p style="font-size: 2.8rem; font-weight: 800; margin-bottom: 0px;" class="gradient-text">$<span class="price-monthly">99</span><span class="price-annually">79</span><span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 400;" data-i18n="price_eli_mo"> /mo</span></p>
+                <div class="annual-label" data-i18n="billed_annually">Billed annually</div>
+                <ul style="margin-bottom: 30px; margin-top: 20px; color: var(--text-muted); padding-left: 20px; line-height: 1.8; font-size: 0.9rem; flex-grow: 1;">
+                    <li data-i18n="price_eli_li1">Unlimited autonomous executions</li>
+                    <li data-i18n="price_eli_li2">Infinite context memory</li>
+                    <li data-i18n="price_eli_li3">System-level terminal control</li>
+                    <li data-i18n="price_eli_li4">Zero-latency response</li>
+                </ul>
+                <a href="https://buy.stripe.com/live_elite99" target="_blank" class="btn btn-primary w-100" style="text-decoration: none; text-align: center; display: block; box-sizing: border-box;" data-i18n="price_eli_btn">Go Elite</a>
+            </div>
+
+            <!-- Founder -->
+            <div class="glass-card" style="padding: 30px; text-align: left; display: flex; flex-direction: column;">
+                <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin-bottom: 5px;" data-i18n="price_fou_title">Founder</h3>
+                <p style="font-size: 2.2rem; font-weight: 800; margin-bottom: 0px; color: var(--text-color);">$<span class="price-monthly">499</span><span class="price-annually">399</span><span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 400;" data-i18n="price_fou_mo"> /mo</span></p>
+                <div class="annual-label" data-i18n="billed_annually">Billed annually</div>
+                <ul style="margin-bottom: 30px; margin-top: 20px; color: var(--text-muted); padding-left: 20px; line-height: 1.8; font-size: 0.9rem; flex-grow: 1;">
+                    <li data-i18n="price_fou_li1">Custom AI model fine-tuning</li>
+                    <li data-i18n="price_fou_li2">Private VPC deployment</li>
+                    <li data-i18n="price_fou_li3">Dedicated support engineer</li>
+                    <li data-i18n="price_fou_li4">White-label capabilities</li>
+                </ul>
+                <a href="https://buy.stripe.com/live_founder499" target="_blank" class="btn btn-outline w-100" style="text-decoration: none; text-align: center; display: block; box-sizing: border-box;" data-i18n="price_fou_btn">Contact Sales</a>
+            </div>
+        </div>
+        <p style="font-size: 0.8rem; margin-top: 40px; color: var(--text-muted);" data-i18n="price_disclaimer">* Powered by Stripe Test Mode. Billed securely via Stripe.</p>
+    </section>
+
+    <section id="profiles" class="profiles-section">
+        <div class="section-header">
+            <h2><span data-i18n="prof_header_1">Target </span><span class="gradient-text" data-i18n="prof_header_2">Global Elite</span></h2>
+            <p data-i18n="prof_sub">Our autonomous agents stand side-by-side with world-class engineers.</p>
+        </div>
+
+        <div class="profile-cards">
+            <div class="glass-card profile-card">
+                <div class="profile-image ui-designer">
+                    <div class="status-dot"></div>
+                </div>
+                <div class="profile-info">
+                    <h3>AG Platforms <span>UI/UX</span></h3>
+                    <p class="role" data-i18n="prof_ui_role">Frontend Wizard</p>
+                    <p class="bio" data-i18n="prof_ui_bio">"I craft breathtaking designs and buttery-smooth micro-interactions. Swipe right for pixel-perfect, uncompromising aesthetics."</p>
+                    <div class="tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">Framer Motion</span>
+                        <span class="tag">Tailwind</span>
+                    </div>
+                    <a href="https://buy.stripe.com/test_6oE7t79Y60G20Wk000" target="_blank" class="btn btn-primary w-100" style="text-decoration: none; display: inline-block; text-align: center; box-sizing: border-box;" data-i18n="prof_btn">Match 💖</a>
+                </div>
+            </div>
+
+            <div class="glass-card profile-card active">
+                <div class="profile-image core-dev">
+                    <div class="status-dot"></div>
+                </div>
+                <div class="profile-info">
+                    <h3>AG Platforms <span>Core</span></h3>
+                    <p class="role" data-i18n="prof_core_role">10x Fullstack Engineer</p>
+                    <p class="bio" data-i18n="prof_core_bio">"From raw specs to production deployments, throw your hardest problems at me. I'll ship features and squash bugs at lightning speed. 😎"</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Architecture</span>
+                        <span class="tag">Zero Bugs</span>
+                    </div>
+                    <a href="https://buy.stripe.com/test_6oE7t79Y60G20Wk000" target="_blank" class="btn btn-primary w-100" style="text-decoration: none; display: inline-block; text-align: center; box-sizing: border-box;" data-i18n="prof_btn">Match 💖</a>
+                </div>
+            </div>
+
+            <div class="glass-card profile-card">
+                <div class="profile-image devops">
+                    <div class="status-dot"></div>
+                </div>
+                <div class="profile-info">
+                    <h3>AG Platforms <span>Ops</span></h3>
+                    <p class="role" data-i18n="prof_ops_role">Infrastructure Guru</p>
+                    <p class="bio" data-i18n="prof_ops_bio">"I'm a YAML artisan and cloud architect. I engineer the invisible foundation—CI/CD, Docker, and zero-downtime deployments."</p>
+                    <div class="tags">
+                        <span class="tag">Docker</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">AWS</span>
+                    </div>
+                    <a href="https://buy.stripe.com/test_6oE7t79Y60G20Wk000" target="_blank" class="btn btn-primary w-100" style="text-decoration: none; display: inline-block; text-align: center; box-sizing: border-box;" data-i18n="prof_btn">Match 💖</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- マッチングLPのどこか（一番下など）にこっそり追加するVIPボタン -->
+    <div style="text-align: center; margin-top: 80px; padding: 40px; background: #050505; border-top: 2px solid #00f2fe;">
+        <h3 style="color: #00f2fe; font-family: 'Courier New', monospace; letter-spacing: 2px;">ULTRA VIP ONLY</h3>
+        <a href="payment.html" style="display: inline-block; padding: 15px 30px; background: linear-gradient(45deg, #00f2fe, #635bff); color: white; font-weight: bold; text-decoration: none; border-radius: 50px; box-shadow: 0 0 20px rgba(0,242,254,0.5);">
+            🔓 LAUNCH CEO DASHBOARD
+        </a>
+    </div>
+
+    <footer class="footer">
+        <div class="logo" style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+            <img src="logo.png" alt="AG Platforms Logo" style="height: 38px; border-radius: 8px;">
+            <div style="text-align: left;">
+                <span class="gradient-text" style="font-weight: 900; letter-spacing: 1px;">AG PLATFORMS</span>
+                
+            </div>
+        </div>
+        <div style="margin-bottom: 20px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <a href="terms.html" style="color: var(--text-color); text-decoration: none; font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-light)'" onmouseout="this.style.color='var(--text-color)'" data-i18n="foot_terms">Terms of Service</a>
+            <span style="color: var(--glass-border);">|</span>
+            <a href="privacy.html" style="color: var(--text-color); text-decoration: none; font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-light)'" onmouseout="this.style.color='var(--text-color)'" data-i18n="foot_privacy">Privacy Policy</a>
+            <span style="color: var(--glass-border);">|</span>
+            <a href="legal.html" style="color: var(--text-color); text-decoration: none; font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-light)'" onmouseout="this.style.color='var(--text-color)'" data-i18n="foot_legal">特定商取引法に基づく表記</a>
+        </div>
+        <p data-i18n="foot_copy">© 2026 AG Platforms. Created for demonstration.</p>
+    </footer>
+
+    <div id="red-panda" style="position: fixed; bottom: -150px; right: 20px; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); z-index: 9999; text-align: center; cursor: pointer;">
+        <div class="panda-message" style="background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); color: #ff006e; padding: 12px 18px; border-radius: 12px; font-weight: 800; font-family: 'Outfit'; font-size: 15px; margin-bottom: 8px; box-shadow: 0 8px 25px rgba(255,0,110,0.3); position: relative; border: 2px solid #ff006e; transform: translateY(0); animation: pulseFloat 2s infinite;">
+            <span data-i18n="panda_msg" id="panda-text">You can do it! 🦝</span>
+            <div style="content: ''; position: absolute; bottom: -10px; right: 45px; border-width: 10px 10px 0; border-style: solid; border-color: #ff006e transparent transparent transparent;"></div>
+            <div style="content: ''; position: absolute; bottom: -7px; right: 45px; border-width: 9px 9px 0; border-style: solid; border-color: rgba(255,255,255,0.9) transparent transparent transparent; z-index: 1;"></div>
+        </div>
+        <div class="panda-emoji" style="font-size: 85px; transform: scaleX(-1); filter: drop-shadow(0 8px 15px rgba(0,0,0,0.4)); animation: jump 1s infinite alternate cubic-bezier(0.5, 0.05, 1, 0.5);">🦝</div>
+    </div>
+
+    <script>
+        // Simple interaction animations
+        document.querySelectorAll('.profile-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                document.querySelectorAll('.profile-card').forEach(c => c.classList.remove('active'));
+                card.classList.add('active');
+            });
+        });
+
+        // Red Panda scrolling gimmick
+        const panda = document.getElementById('red-panda');
+        const messages = ["Keep scrolling! 🔥", "Almost there! 🚀", "You're doing great! 🐾", "Match with us! 💖"];
+        const messageBox = panda.querySelector('div:first-child');
+        
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.scrollY;
+            const docHeight = document.body.offsetHeight - window.innerHeight;
+            const scrollPercent = scrollPos / docHeight;
+            
+            if (scrollPercent > 0.1) {
+                // Pop up the panda
+                panda.style.bottom = '20px';
+                
+                // Change message based on scroll depth
+                const msgIndex = Math.min(Math.floor(scrollPercent * messages.length), messages.length - 1);
+                messageBox.childNodes[0].nodeValue = messages[msgIndex] + " ";
+                
+                // Give it a little bounce animation based on scroll speed (simplified)
+                panda.style.transform = `translateY(${Math.sin(scrollPos * 0.05) * 5}px)`;
+            } else {
+                panda.style.bottom = '-150px';
+            }
+        });
+        // Pricing Toggle Logic
+        let isAnnual = false;
+        function setBilling(mode) {
+            if (mode === 'annual' && !isAnnual) { toggleBilling(); }
+            else if (mode === 'monthly' && isAnnual) { toggleBilling(); }
+        }
+        function toggleBilling() {
+            isAnnual = !isAnnual;
+            const toggleEl = document.getElementById('billing-toggle');
+            const grid = document.getElementById('pricing-grid');
+            const lblM = document.getElementById('label-monthly');
+            const lblA = document.getElementById('label-annually');
+            if (isAnnual) {
+                toggleEl.classList.add('active');
+                grid.classList.add('is-annual');
+                lblA.classList.add('active');
+                lblM.classList.remove('active');
+            } else {
+                toggleEl.classList.remove('active');
+                grid.classList.remove('is-annual');
+                lblA.classList.remove('active');
+                lblM.classList.add('active');
+            }
+        }
+    </script>
+    <script src="i18n.js"></script>
+</body>
+</html>

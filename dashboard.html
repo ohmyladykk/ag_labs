@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG Labs - CEO Dashboard</title>
+    <link rel="stylesheet" href="ultra.css">
+    <style>
+        /* 📱 スマホ・PC両対応の追加スタイル */
+        .ceo-hologram-container {
+            width: 90vw; max-width: 600px;
+            aspect-ratio: 16 / 9;
+            margin: 20px auto;
+            background: #000;
+            cursor: pointer; /* クリックできることを示す */
+        }
+        .ceo-video { width: 100%; height: 100%; object-fit: cover; border-radius: 15px; }
+        .payment-card { width: 90vw; max-width: 400px; margin: 20px auto; }
+        @media (max-width: 600px) {
+            .glitch { font-size: 2rem; }
+            .btn-nexo, .btn-stripe { padding: 15px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body class="dashboard-body">
+    <div class="cyber-container">
+        <header>
+            <h1 class="glitch" data-text="AG Labs">AG Labs</h1>
+            <div class="status-badge">ULTRA MODE [ACTIVE]</div>
+        </header>
+
+        <main>
+            <div class="ceo-hologram-container" onclick="this.querySelector('video').play()">
+                <div class="hologram-effect"></div>
+                <!-- 透明なポスター画像（1x1ピクセル）を使用し、動画重視の構成に -->
+                <video id="ceo-video" class="ceo-video" loop muted playsinline autoplay poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+                    <source src="panda_ceo.mp4" type="video/mp4">
+                    Browser not supported.
+                </video>
+                <p style="color: #00f2fe; font-size: 0.7rem; margin-top: 5px;">※動画が動かない場合は画面をタップしてください</p>
+            </div>
+
+            <div class="payment-card">
+                <h3>💎 PREMIUM MEMBERSHIP</h3>
+                <div class="pay-buttons">
+                    <!-- リンクの設定を維持したままスタイルを適用 -->
+                    <button class="btn-nexo" onclick="window.open('https://nexo.com/', '_blank')" style="background:#1a42d9; color:white; width:100%; margin:10px 0; padding:15px; border-radius:10px; border:none; font-weight:bold; cursor:pointer;">₿ Nexo / Crypto</button>
+                    <button class="btn-stripe" onclick="window.open('https://stripe.com/jp', '_blank')" style="background:#635bff; color:white; width:100%; margin:10px 0; padding:15px; border-radius:10px; border:none; font-weight:bold; cursor:pointer;">💳 Credit Card</button>
+                </div>
+            </div>
+            
+            <a href="index.html" class="back-link" style="color:#888; text-decoration:none;">← BACK TO LP</a>
+        </main>
+    </div>
+
+    <script>
+        // 強制再生スクリプト (スマホの制約回避)
+        window.addEventListener('touchstart', function() {
+            document.getElementById('ceo-video').play();
+        }, {once: true});
+        window.addEventListener('click', function() {
+            document.getElementById('ceo-video').play();
+        }, {once: true});
+    </script>
+</body>
+</html>
