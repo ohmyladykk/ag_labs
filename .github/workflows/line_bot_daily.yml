@@ -1,28 +1,30 @@
-name: Daily LINE Notification
+name: "Daily Job Report"
 
 on:
   schedule:
-    # UTCの22:00は日本時間(JST)の翌午前7:00になります
-    - cron: '0 22 * * *'
-  # GitHub Actionsの画面から手動でテスト実行できるようにする設定
+    - cron: '15 22 * * *'
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
-  notify:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
-      
-      - name: Set up Node.js
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # LTSを利用
-          
-      - name: Run LINE Bot Script
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm install axios
+
+      - name: Run bot
         env:
-          # 新しいLINE Messaging APIのチャネルアクセストークン
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
-          # 宛先を指定するユーザーID
           LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
         run: node bot.js
