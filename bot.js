@@ -1,58 +1,39 @@
-async function sendLine() {
-    // 宛先を指定して送信する「プッシュメッセージ」エンドポイント
-    const url = "https://api.line.me/v2/bot/message/push";
+const axios = require('axios');
 
-    // 環境変数からチャネルアクセストークンとユーザーIDを取得
-    const token = process.env.LINE_CHANNEL_ACCESS_TOKEN;
-    const userId = process.env.LINE_USER_ID;
+// GitHubの金庫から「LINEの鍵」だけを取り出す（全員に送るので、社長のIDはもう使いません！）
+const TOKEN = process.env.LINE_CHANNEL_ACCESS_TOKEN;
 
-    if (!token) {
-        console.error("エラー: LINE_CHANNEL_ACCESS_TOKEN の環境変数が設定されていません。");
-        return;
-    }
-    if (!userId) {
-        console.error("エラー: LINE_USER_ID の環境変数が設定されていません。宛先を指定するためのユーザーIDが必要です。");
-        return;
-    }
-
-    const headers = {
-        "Authorization": `Bearer ${token}`,
-        "Content-Type": "application/json"
-    };
-
-    const now = new Date();
-    // 日本時間にあわせて成形
-    const timeString = now.toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" });
-    const msg = `【勤怠連絡】\nおはようございます。本日は在宅勤務(テレワーク)にて業務を開始いたします。\n現在時刻: ${timeString}\nよろしくお願いいたします。`;
-
-    // LINE Messaging API 用のJSONフォーマット（"to" でユーザーIDを指定）
-    const body = JSON.stringify({
-        to: userId,
-        messages: [
-            {
-                type: "text",
-                text: msg
-            }
-        ]
-    });
-
-    try {
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: headers,
-            body: body
-        });
-
-        if (!response.ok) {
-            const errorDetails = await response.text();
-            throw new Error(`HTTP error! status: ${response.status}, details: ${errorDetails}`);
-        }
-        console.log("LINE notification sent successfully via Messaging API (Push).");
-    } catch (error) {
-        console.error(`Failed to send LINE notification: ${error.message}`);
-        if (error.cause) console.error("Cause:", error.cause);
-    }
+if (!TOKEN) {
+    console.error('エラー: LINE_CHANNEL_ACCESS_TOKEN が設定されていません。');
+    process.exit(1);
 }
 
-sendLine();
+// 魔法①：宛先を「push（個別）」から「broadcast（全員）」に変更！
+const url = 'https://api.line.me/v2/bot/message/broadcast';
 
+// 魔法②：宛先（to）の指定を削除して、メッセージ内容だけにする！
+const data = {
+    messages: [
+        {
+            type: 'text',
+            // ↓ ここに在宅ワークのリンクや、送りたいメッセージを書いてください！
+            text: 'おはようございます！今日の在宅ワークのリンクはこちらです！\nhttps://example.com'
+        }
+    ]
+};
+
+// 鍵穴の準備
+const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${TOKEN}`
+};
+
+// 全員に向けてメッセージを一斉発射！🚀
+axios.post(url, data, { headers: headers })
+    .then(response => {
+        console.log('一斉送信（Broadcast）大成功！全員に手紙を配りました！:', response.data);
+    })
+    .catch(error => {
+        console.error('エラー発生:', error.response ? error.response.data : error.message);
+        process.exit(1);
+    });
