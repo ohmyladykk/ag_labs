@@ -20,11 +20,12 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Install dependencies
-        run: npm install axios
-
-      - name: Run bot
+      - name: Install and Run Bot
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
           LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
-        run: node bot.js
+        # ↓ ここがポイント！「|」を使うとrunを1つにまとめられます！
+        run: |
+          npm install axios
+          node bot.js
+      
