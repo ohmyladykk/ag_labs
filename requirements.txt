@@ -1,0 +1,13 @@
+beautifulsoup4
+customtkinter
+Flask
+Flask-Cors
+openai
+Pillow
+playwright
+plyer
+python-dotenv
+requests
+schedule
+SpeechRecognition
+line-bot-sdk
